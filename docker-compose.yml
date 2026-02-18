@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  churn-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+
+  train:
+    build: .
+    command: python -m src.pipelines.training_pipeline
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    profiles:
+      - training
