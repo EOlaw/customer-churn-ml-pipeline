@@ -2,6 +2,23 @@
 
 A production-ready, end-to-end ML pipeline that predicts customer churn probability, segments customers using behavioral clustering, and generates executive-ready analytics outputs.
 
+## Documentation
+
+Full documentation is available in the [`docs/`](docs/) folder:
+
+| Document | Description |
+|----------|-------------|
+| [Documentation Index](docs/INDEX.md) | Start here — links to all docs |
+| [Architecture](docs/architecture.md) | System design, data flow, component interactions |
+| [Project Structure](docs/project-structure.md) | Every folder and file explained |
+| [Data Pipeline](docs/data-pipeline.md) | Ingestion, feature engineering, preprocessing |
+| [ML Models](docs/ml-models.md) | Training, evaluation, hyperparameters, feature importance |
+| [Clustering & Segmentation](docs/clustering-segmentation.md) | K-Means, elbow method, business segments |
+| [API Reference](docs/api-reference.md) | FastAPI endpoints, schemas, usage examples |
+| [Deployment Guide](docs/deployment.md) | Docker, local setup, cloud deployment |
+| [Configuration Guide](docs/configuration.md) | Environment variables, settings, customization |
+| [BI & Tableau Guide](docs/bi-outputs.md) | Tableau datasets, executive KPIs, visualizations |
+
 ## Business Problem
 
 Customer churn directly impacts revenue and growth. This system:
